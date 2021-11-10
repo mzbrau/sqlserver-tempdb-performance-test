@@ -58,6 +58,14 @@ TempDbPerformanceTester.exe 20 10 100 "Server=TESTLISTENER,1433;Database=TestDb2
    11. Waits (10ms in this case)
    12. Starts again at step a
 
+## Steps to Reproduce The Problem
+
+1. Set up a basic SQL Always On cluster. The results below were produced on a stand-alone set of 3 Windows Server 2016 VM’s with SQL Server 2017. 2 sync commit and 1 async. An empty test database was created to allow the always on cluster. This is the database in the connection string.
+2. Enable query store on the empty database
+3. Start the tool and run it with the parameters in the example above (adjusted for your cluster)
+4. Let it run for about 12 hours
+5. Look at the report.txt file
+
 ## Results
 
 ### SQL 2017 CU27
