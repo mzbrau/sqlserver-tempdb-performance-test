@@ -69,7 +69,7 @@ namespace TempDbPerformanceTester
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"{_id}: Error running query: {e}");
+                    Console.WriteLine($"{DateTime.Now.ToString("g", CultureInfo.InvariantCulture)} {_id}: Error running query: {e.Message}");
                 }
                 finally
                 {
