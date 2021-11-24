@@ -117,3 +117,21 @@ The raw data for this can be found [here](https://github.com/mzbrau/sqlserver-te
 #### Analysis
 
 It appears that this issue is not present in SQL2019 CU13. Trend lines indicate a downward trend for execution time if anything although the execution time was quite consistent for the entire test period.
+
+### SQL 2016 SP2 CU17
+
+To see when this problem was introduced, the test was run against an SQL2016 Cluster.
+The tool was run for 14 hours against SQL2016 SP2 CU17. The result was then charted in Excel.
+The raw data for this can be found [here](https://github.com/mzbrau/sqlserver-tempdb-performance-test/blob/main/Resources/SQL2016_RawData.xlsx).
+
+#### Tool Output
+
+![excel chart of tool output](https://github.com/mzbrau/sqlserver-tempdb-performance-test/blob/main/Resources/SQL2016_ToolOutput_QueryDuration.png)
+
+#### Query Store Results
+
+![excel chart of query store execution time](https://github.com/mzbrau/sqlserver-tempdb-performance-test/blob/main/Resources/SQL2016_QueryStore_QueryDuration.png)
+
+#### Analysis
+
+It appears that this issue is not present in SQL2016 SP1 CU17. Trend lines indicate a downward trend for execution time if anything although the execution time was quite consistent for the entire test period.
